@@ -127,7 +127,7 @@ export default class ProductsList extends Component {
                                     <Link className="nav-link" to={"/product/" + list[0]._id}>
                                         <h4 className="card-title">{list[0].title}</h4>
                                     </Link>
-                                    <p className="card-text"><FaDollarSign color='white' size='1rem' />{list[0].precio}</p>
+                                    <p> </p>
                                 </div>
                             </div>
                         </div>

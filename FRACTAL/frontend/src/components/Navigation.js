@@ -78,7 +78,8 @@ export default class Navigation extends Component {
                     <div className="container">
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                                 {/*categorias*/}
-                            <ul className="navbar-nav mr-auto">
+                            <ul id = "titulo"
+                                className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
                                     FRACTAL
                                 </Link>
@@ -86,22 +87,6 @@ export default class Navigation extends Component {
                                     <span className="navbar-toggler-icon"></span>
                                 </button>
 
-                                <li className="nav-item dropdown" onClick={() => this.clickChange()}>
-                                    <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Sort By
-                                    </a>
-                                    <div className={"dropdown-menu d-" + this.state.dropdown} aria-labelledby="navbarDropdown">Categories
-                                        {this.state.categories.map(category => (
-                                            <a className="dropdown-item" key={category.idcategory} href={"http://localhost:3000/category/" + category.nameCategory}>{category.nameCategory}</a>
-                                        ))}
-                                        <div className="dropdown-divider"></div>Deliveries
-                                        {this.state.deliveries.map(delivery => (
-                                            <a className="dropdown-item" key={delivery.iddeliveryType} href={"http://localhost:3000/delivery/" + delivery.deliveryTypeName}>{delivery.deliveryTypeName}</a>
-                                        ))}
-                                        <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item" href={"http://localhost:3000/precios/" + "pr"}>Precios</a>
-                                    </div>
-                                </li>
                             </ul>
                                 {/*buscador*/}
                             <form className="form-inline my-2 my-lg-0">
@@ -151,7 +136,8 @@ export default class Navigation extends Component {
                     <div className="container">
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                                 {/*categorias*/}
-                            <ul className="navbar-nav mr-auto">
+                            <ul id = "titulo"
+                                className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
                                     FRACTAL
                                 </Link>
@@ -159,22 +145,6 @@ export default class Navigation extends Component {
                                     <span className="navbar-toggler-icon"></span>
                                 </button>
 
-                                <li className="nav-item dropdown" onClick={() => this.clickChange()}>
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Sort By
-                                    </a>
-                                    <div className={"dropdown-menu d-" + this.state.dropdown} aria-labelledby="navbarDropdown">Categories
-                                        {this.state.categories.map(category => (
-                                            <a className="dropdown-item" key={category.idcategory} href={"http://localhost:3000/category/" + category.nameCategory}>{category.nameCategory}</a>
-                                        ))}
-                                        <div className="dropdown-divider"></div>Deliveries
-                                        {this.state.deliveries.map(delivery => (
-                                            <a className="dropdown-item" key={delivery.iddeliveryType} href={"http://localhost:3000/delivery/" + delivery.deliveryTypeName}>{delivery.deliveryTypeName}</a>
-                                        ))}
-                                        <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item" href={"http://localhost:3000/precios/" + "pr"}>Precios</a>
-                                    </div>
-                                </li>
                             </ul>
                             {/*buscador*/}
                             <form className="form-inline my-2 my-lg-0">
@@ -224,7 +194,8 @@ export default class Navigation extends Component {
                     <div className="container">
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                                 {/*categorias*/}
-                            <ul className="navbar-nav mr-auto">
+                            <ul id = "titulo"
+                                className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
                                     FRACTAL
                                 </Link>
@@ -232,22 +203,6 @@ export default class Navigation extends Component {
                                     <span className="navbar-toggler-icon"></span>
                                 </button>
 
-                                <li className="nav-item dropdown" onClick={() => this.clickChange()}>
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Sort By
-                                    </a>
-                                    <div className={"dropdown-menu d-" + this.state.dropdown} aria-labelledby="navbarDropdown">Categories
-                                        {this.state.categories.map(category => (
-                                            <a className="dropdown-item" key={category.idcategory} href={"http://localhost:3000/category/" + category.nameCategory}>{category.nameCategory}</a>
-                                        ))}
-                                        <div className="dropdown-divider"></div>Deliveries
-                                        {this.state.deliveries.map(delivery => (
-                                            <a className="dropdown-item" key={delivery.iddeliveryType} href={"http://localhost:3000/delivery/" + delivery.deliveryTypeName}>{delivery.deliveryTypeName}</a>
-                                        ))}
-                                        <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item" href={"http://localhost:3000/precios/" + "pr"}>Precios</a>
-                                    </div>
-                                </li>
                             </ul>
                             {/*buscador*/}
                             <form className="form-inline my-2 my-lg-0">

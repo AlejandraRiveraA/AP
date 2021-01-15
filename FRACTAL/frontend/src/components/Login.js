@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
  import axios from 'axios'
 import UserContext from '../UserContext'
+import "./BtmColor.css"
+
 
 
 export default class Login extends Component {
@@ -86,13 +88,16 @@ export default class Login extends Component {
                        onChange={this.onInputChangeUser} 
                        className="form-control" 
                        placeholder="Enter Username"/>
+                       <br></br>
                 <label htmlFor="password" className="sr-only">Password: </label>
                 <input type="password" 
                        name="password" 
                        onChange={this.onInputChangePass} 
                        className="form-control" 
                        placeholder="Enter Password"/>
-                <button className="btn btn-lg btn-primary btn-block" 
+                       <br></br>
+                <button id = "botonlogin"
+                        className="btn btn-lg btn-primary btn-block" 
                         type="submit">Log in </button>
             </form>
             </div>
