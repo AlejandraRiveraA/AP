@@ -4,7 +4,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 //import axios from 'axios';
 import UserContext from '../UserContext'
 import axios from 'axios'
-
+import "./NavBarStyle.css"
 
 
 export default class Navigation extends Component {
@@ -24,12 +24,6 @@ export default class Navigation extends Component {
         }
     }
 
-    /*state = {
-
-        userStatus: '',
-        auth: false
-    
-    }*/
 
     onInputChange = e => {
 
@@ -86,7 +80,7 @@ export default class Navigation extends Component {
                                 {/*categorias*/}
                             <ul className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
-                                    El Mercadito
+                                    FRACTAL
                                 </Link>
                                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
@@ -153,13 +147,13 @@ export default class Navigation extends Component {
         //Navbar Admin
         const authenticatedNavBar = () => {
             return (
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-success">
                     <div className="container">
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                                 {/*categorias*/}
                             <ul className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
-                                    El Mercadito
+                                    FRACTAL
                                 </Link>
                                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
@@ -226,13 +220,13 @@ export default class Navigation extends Component {
         //Navbar cuando no se está log
         const unlogNavBar = () => {
             return (
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-success">
                     <div className="container">
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                                 {/*categorias*/}
                             <ul className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
-                                    El Mercadito
+                                    FRACTAL
                                 </Link>
                                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
