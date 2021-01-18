@@ -74,7 +74,7 @@ export default class Register extends Component {
                     <div className="form-group">
                         <input type="text"
                         className="form-control" 
-                        placeholder="Usuario" 
+                        placeholder="Nombre de usuario" 
                         name="username"
                         onChange={this.onInputChange} 
                         value={this.state.username}
@@ -86,7 +86,7 @@ export default class Register extends Component {
                     <div className="form-group">
                         <input type="password" 
                         className="form-control" 
-                        placeholder="Password" 
+                        placeholder="Constraseña" 
                         name="password"
                         onChange={this.onInputChange}
                         value={this.state.password}
@@ -111,7 +111,7 @@ export default class Register extends Component {
                     <div className="form-group">
                         <input type="text"
                         className="form-control" 
-                        placeholder="Apellido" 
+                        placeholder="Primer Apellido" 
                         name="apellido1"
                         onChange={this.onInputChange} 
                         value={this.state.apellido1}
@@ -123,7 +123,7 @@ export default class Register extends Component {
                     <div className="form-group">
                         <input type="text"
                         className="form-control" 
-                        placeholder="Apellido" 
+                        placeholder="Segundo Apellido" 
                         name="apellido2"
                         onChange={this.onInputChange} 
                         value={this.state.apellido2}
@@ -133,6 +133,7 @@ export default class Register extends Component {
 
                     {/*SET DATE */}
                     <div className="form-group">
+                        <h6>Fecha de Nacimiento</h6>
                         <DatePicker 
                         className="form-control" 
                         selected={this.state.date} 

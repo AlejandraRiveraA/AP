@@ -81,24 +81,24 @@ export default class Login extends Component {
             <div className="col-md-6 offset-md-3">
                 <div className="card card-body">
             <form onSubmit={this.onSubmit}>
-                <h3>Log In</h3>
+                <h3>Inicio de Sesión</h3>
                 <label htmlFor="username" className="sr-only">Username: </label>
                 <input type="text" 
                        name="username" 
                        onChange={this.onInputChangeUser} 
                        className="form-control" 
-                       placeholder="Enter Username"/>
+                       placeholder="Nombre de usuario"/>
                        <br></br>
                 <label htmlFor="password" className="sr-only">Password: </label>
                 <input type="password" 
                        name="password" 
                        onChange={this.onInputChangePass} 
                        className="form-control" 
-                       placeholder="Enter Password"/>
+                       placeholder="Constraseña"/>
                        <br></br>
                 <button id = "botonlogin"
                         className="btn btn-lg btn-primary btn-block" 
-                        type="submit">Log in </button>
+                        type="submit">Ingresar</button>
             </form>
             </div>
         </div>

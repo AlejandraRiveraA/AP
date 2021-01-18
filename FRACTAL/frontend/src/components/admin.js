@@ -54,12 +54,12 @@ export default class Admin extends Component {
                 <div className="card card-body">
                     <h4>Herramientas de Admin</h4>
 
-
-                    {/*SET usernarme */}
+{/*
+                    
                     <div className="form-group">
-
+                    
                         <form onSubmit={this.onSubmitCategory}>
-
+                            
                             <button type='submit' className="btn btn-warning">
                                 Categoría 
                             </button>
@@ -79,7 +79,7 @@ export default class Admin extends Component {
 
                         </form>
                     
-                    </div>
+                    </div>}*/}
 
 
                     <div className="form-group">

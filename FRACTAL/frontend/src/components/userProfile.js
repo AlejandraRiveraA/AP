@@ -94,7 +94,7 @@ export default class profile extends Component {
         return (
             <div className="col-md-6 offset-md-3">
                 <div className="card card-body">
-                    <h4>User Profile</h4>
+                    <h4>Perfil</h4>
 
                     <br></br>
                     {/*SET profilePic */}
@@ -110,18 +110,18 @@ export default class profile extends Component {
 
                     {/*SET usernarme */}
                     <div className="form-group">
-                    <label>Username : {user.nombre} </label>
+                    <label>Nombre de usuario: {user.nombre} </label>
                     </div>
 
                     
                     {/*SET name */}
                     <div className="form-group">
-                    <label>Name: {this.state.nombreCompleto}  </label>
+                    <label>Nombre Completo: {this.state.nombreCompleto}  </label>
                     </div>
             
                     {/*SET fecha de nacimiento */}
                     <div className="form-group">
-                    <label>User Type: {user.admin} </label>
+                    <label>Tipo de usuario: {user.admin} </label>
                     </div>
 
                     <br></br>
@@ -129,7 +129,7 @@ export default class profile extends Component {
                     <form onSubmit={this.onSubmitImage}>
 
                         <button type="submit" className="btn btn-outline-success">
-                            Upload Image
+                            Subir Imagen
                          </button>
 
                     </form>
@@ -139,38 +139,13 @@ export default class profile extends Component {
                     <form onSubmit={this.onSubmit}>
 
                         <button type='submit' className="btn btn-primary">
-                            Back
+                            Volver
                         </button>
 
                     </form>
                 </div>
                 <br></br>
-                <label>Historial</label>
                 
-                <div className="card card-body" >
-                   
-                            {
-                                this.state.historial.map((prods, index)=> (
-                                    <div className="card card-body" key={index} style={{backgroundColor: "#BDFFF3"}}>
-                                    
-
-                                        {"Total de la compra: " +prods.total} 
-                                        {prods.productos.split("\n").map((sub, ind)=>(
-                                            <p className="card card-body" key={ind}>
-                                                {sub}
-                                            </p>
-                                            ))
-                                        }
-                                        
-                                        
-                                    
-                                    </div>
-                                    
-                                ))
-                                
-                            }
-                    
-                </div>
              </div>
         )
     }
