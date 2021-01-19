@@ -55,7 +55,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // routes
 app.use('/api/users', require ('./routes/users') )
 app.use('/api/suculents', require ('./routes/suculents') )
-
+app.use('/api/posts', require ('./routes/posts') )
 
 
 app.use('/api/comment', require ('./routes/comments'))

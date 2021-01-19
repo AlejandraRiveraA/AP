@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const productSchema = new Schema(
+const postSchema = new Schema(
     {
         title: {
             type: String,
@@ -14,19 +14,10 @@ const productSchema = new Schema(
             trim: true
         },
 
-        precio: Number,
-        
-        cantidad: Number,
-
-        categoria: String,
-
-        envio: String,
-
-        bloqueo: Boolean
-
+    
     }, {
 
         timestamps: true
     });
 
-module.exports = model('Product', productSchema);
+module.exports = model('Post', postSchema);
