@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { FaShoppingCart } from 'react-icons/fa';
-//import axios from 'axios';
 import UserContext from '../UserContext'
 import axios from 'axios'
 import "./NavBarStyle.css"
@@ -18,7 +16,7 @@ export default class Navigation extends Component {
             password: '',
             title: '',
             auth: false,
-            
+
         }
     }
 
@@ -32,7 +30,7 @@ export default class Navigation extends Component {
     }
 
     async componentDidMount() {
-        
+
     }
 
     async logOut() {
@@ -65,7 +63,7 @@ export default class Navigation extends Component {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container">
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-                            {/*categorias*/}
+
                             <ul id="titulo"
                                 className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
@@ -112,10 +110,6 @@ export default class Navigation extends Component {
                                 </Link>
                                 </li>
 
-
-                                
-
-
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/profile">
                                         Mi Perfil
@@ -126,13 +120,7 @@ export default class Navigation extends Component {
                                         <span onClick={this.logOut}>LogOut</span>
                                     </Link>
                                 </li>
-                                {/*
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to="/shoppingCar">
-                                        <FaShoppingCart color='white' size='1.5rem' />
-                                    </Link>
-                                </li>
-                                */}
+
                             </ul>
                         </div>
 
@@ -147,7 +135,7 @@ export default class Navigation extends Component {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-success">
                     <div className="container">
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-                            {/*categorias*/}
+
                             <ul id="titulo"
                                 className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
@@ -158,6 +146,7 @@ export default class Navigation extends Component {
                                 </button>
 
                             </ul>
+
                             {/*buscador*/}
                             <form className="form-inline my-2 my-lg-0">
                                 <input className="form-control mr-sm-2"
@@ -204,8 +193,6 @@ export default class Navigation extends Component {
                                 </li>
 
 
-                                
-
 
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/profile">
@@ -230,17 +217,7 @@ export default class Navigation extends Component {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-success">
                     <div className="container">
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-                            {/*categorias*/}
-                            <ul id="titulo"
-                                className="navbar-nav mr-auto">
-                                <Link className="navbar-brand" to="/">
-                                    FRACTAL
-                                </Link>
-                                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span className="navbar-toggler-icon"></span>
-                                </button>
 
-                            </ul>
                             {/*buscador*/}
                             <form className="form-inline my-2 my-lg-0">
                                 <input className="form-control mr-sm-2"

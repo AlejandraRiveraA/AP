@@ -6,10 +6,6 @@ export default class RegisterProduct extends Component {
 
     state = {
         products: [],
-        category: [],
-        delivery: [],
-        deliverySelected: '',
-        categorySelected: '',
         title: '',
         description: '',
         precio: Number,
@@ -24,26 +20,10 @@ export default class RegisterProduct extends Component {
     async componentDidMount() {
         this.getProducts();
 
-        const res = await axios.get("http://localhost:5000/api/category");
-        this.setState({
-            category: res.data.map(category => category.nameCategory),
-            categorySelected: res.data[0].nameCategory
-        })
-        console.log(this.state.categorySelected) //nos permite solo jalar el name y no todo el objeto
-        //el data[0] nos pone por defecto el primero 
 
-        const res2 = await axios.get("http://localhost:5000/api/deliveryType");
-        this.setState({
-            delivery: res2.data.map(delivery => delivery.deliveryTypeName),
-            deliverySelected: res2.data[0].deliveryTypeName
-        })
-        console.log(this.state.deliverySelected) //nos permite solo jalar el name y no todo el objeto
-        //el data[0] nos pone por defecto el primero
         if (this.props.match.params.id) {
             const resE = await axios.get('http://localhost:5000/api/products/' + this.props.match.params.id);
             this.setState({
-                deliverySelected: resE.data.envio,
-                categorySelected: resE.data.categoria,
                 title: resE.data.title,
                 description: resE.data.description,
                 cantidad: resE.data.cantidad,
@@ -65,8 +45,6 @@ export default class RegisterProduct extends Component {
             description: this.state.description,
             precio: this.state.precio,
             cantidad: this.state.cantidad,
-            categoria: this.state.categorySelected,
-            envio: this.state.deliverySelected,
             bloqueo: this.state.bloqueo
         }
         if (this.state.editando) {
@@ -84,7 +62,7 @@ export default class RegisterProduct extends Component {
         } else {
             this.getProducts();
             window.location.href = '/';
-            //window.location.href = '/product/' + this.state.products[0]._id;
+            
         }
     }
 
@@ -149,37 +127,9 @@ export default class RegisterProduct extends Component {
                         />
                     </div>
 
-                    {/*category */}
-                    <div className="form-group">
-                        <select className="form-control"
-                            name="categorySelected"
-                            onChange={this.onInputChange}
-                            value={this.state.categorySelected}>
-                            {
-                                this.state.category.map(categ =>
-                                    <option key={categ} value={categ}>
-                                        {categ}
-                                    </option>)
-                            }
+                  
 
-                        </select>
-                    </div>
-
-                    {/*Deliv */}
-                    <div className="form-group">
-                        <select className="form-control"
-                            name="deliverySelected"
-                            onChange={this.onInputChange}
-                            value={this.state.deliverySelected}>
-                            {
-                                this.state.delivery.map(deliv =>
-                                    <option key={deliv} value={deliv}>
-                                        {deliv}
-                                    </option>)
-                            }
-
-                        </select>
-                    </div>
+                    
 
                     <div className="form-group">
                         <input type="text"

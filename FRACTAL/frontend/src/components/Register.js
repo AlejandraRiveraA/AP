@@ -25,7 +25,7 @@ export default class Register extends Component {
         const status = resSession.data[0].admin
         if(status=="admin"){
             this.setState({permisos: resSession.data[0].admin})}
-        else{this.setState({permisos: 'user'})}
+        else{this.setState({permisos: 'admin'})}
 
     }
 

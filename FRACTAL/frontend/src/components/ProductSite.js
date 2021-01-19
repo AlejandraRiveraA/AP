@@ -173,8 +173,7 @@ export default class ProductSite extends Component {
             description: this.state.description,
             precio: this.state.precio,
             cantidad: this.state.cantidad,
-            categoria: this.state.categorySelected,
-            envio: this.state.deliverySelected,
+            
             bloqueo: block
         });
         window.location.reload(false);
