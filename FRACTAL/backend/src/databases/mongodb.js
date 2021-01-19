@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 const URI = process.env.MONGODB_URI 
-    ? process.env.MONGODB_URI : 'mongodb://localhost/mongoelmercadito';
+    ? process.env.MONGODB_URI : 'mongodb://localhost/Fractal';
 
 mongoose.connect(URI, {
     useNewUrlParser: true,
