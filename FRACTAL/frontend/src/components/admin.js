@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
- import axios from 'axios'
+import "./BtmColor.css"
 
 export default class Admin extends Component {
     
@@ -54,13 +54,11 @@ export default class Admin extends Component {
                     <h4>Herramientas de Publicación</h4>
 
 
-
-
                     <div className="form-group">
 
                         <form onSubmit={this.onSubmitSuculent}>
                             
-                            <button type='submit' className="btn btn-warning">
+                            <button id = 'botonlogin' type='submit' className="btn btn-success">
                                 Registrar una suculenta personal
                             </button>
 
@@ -72,7 +70,7 @@ export default class Admin extends Component {
 
                         <form onSubmit={this.onSubmitPost}>
                             
-                            <button type='submit' className="btn btn-warning">
+                            <button id = 'botonlogin' type='submit' className="btn btn-success">
                                 Registrar un post en el foro    
                                 </button>
 
@@ -94,7 +92,7 @@ export default class Admin extends Component {
 
                         <form onSubmit={this.onSubmit}>
 
-                            <button type='submit' color = "FF2D00" className="btn btn-primary" >
+                            <button type='submit' className="btn btn-primary" >
                                 Volver
                             </button>
 

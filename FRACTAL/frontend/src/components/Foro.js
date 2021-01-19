@@ -117,9 +117,6 @@ export default class Foro extends Component {
 
     
 
- 
-      
-
     render() {
         
             return (

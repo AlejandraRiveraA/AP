@@ -101,11 +101,7 @@ export default class profile extends Component {
                         
                         </div>
 
-                        {/*SET fecha de nacimiento */}
-                        <div className="form-group">
-                            <label>Tipo de usuario: {user.admin} </label>
-
-                        </div>
+                      
 
                         {/*SET name */}
                         <div className="form-group">
