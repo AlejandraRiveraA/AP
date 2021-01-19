@@ -13,7 +13,7 @@ const properties = {
     className: 'slides'
 }
 
-export default class ProductSite extends Component {
+export default class SuculentSite extends Component {
 
     state = {
         images: [],
@@ -41,7 +41,7 @@ export default class ProductSite extends Component {
     async componentDidMount() {
 
         
-        const res = await axios.get('http://localhost:5000/api/products/' + this.props.match.params.id);
+        const res = await axios.get('http://localhost:5000/api/suculents/' + this.props.match.params.id);
         this.setState({
             title: res.data.title,
             description: res.data.description,

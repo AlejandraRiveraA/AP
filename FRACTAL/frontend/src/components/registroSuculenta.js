@@ -1,56 +1,53 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-export default class RegisterProduct extends Component {
+export default class RegisterSuculent extends Component {
 
 
     state = {
-        products: [],
+        suculents: [],
         title: '',
         description: '',
-        precio: Number,
-        cantidad: Number,
-        categoria: '',
-        envio: '',
-        bloqueo: false,
+        enfermedad: '',
+        reproduction: '',
+        cuidado: '',
         editando: false,
         _id: ''
     }
 
     async componentDidMount() {
-        this.getProducts();
+        this.getSuculents();
 
 
         if (this.props.match.params.id) {
-            const resE = await axios.get('http://localhost:5000/api/products/' + this.props.match.params.id);
+            const resE = await axios.get('http://localhost:5000/api/suculents/' + this.props.match.params.id);
             this.setState({
                 title: resE.data.title,
                 description: resE.data.description,
-                cantidad: resE.data.cantidad,
-                precio: resE.data.precio,
-                bloqueo: resE.data.bloqueo,
-                editando: true,
+                enfermedad: resE.data.enfermedad,
+                reproduction: resE.data.reproduction,
+                cuidado: resE.data.cuidado,
                 _id: this.props.match.params.id
             })
         }
     }
-    async getProducts() {
-        const res = await axios.get('http://localhost:5000/api/products')
-        this.setState({ products: res.data })
+    async getSuculents() {
+        const res = await axios.get('http://localhost:5000/api/suculents')
+        this.setState({ suculents: res.data })
     }
 
     async registrar() {
-        const newProduct = {
+        const newSuculent = {
             title: this.state.title,
             description: this.state.description,
-            precio: this.state.precio,
-            cantidad: this.state.cantidad,
-            bloqueo: this.state.bloqueo
+            enfermedad: this.state.enfermedad,
+            reproduction: this.state.reproduction,
+            cuidado: this.state.cuidado
         }
         if (this.state.editando) {
-            await axios.put('http://localhost:5000/api/products/' + this.state._id, newProduct);
+            await axios.put('http://localhost:5000/api/suculents/' + this.state._id, newSuculent);
         } else {
-            await axios.post('http://localhost:5000/api/products', newProduct);
+            await axios.post('http://localhost:5000/api/suculents', newSuculent);
         }
     }
 
@@ -58,9 +55,9 @@ export default class RegisterProduct extends Component {
         e.preventDefault();
         this.registrar();
         if (this.props.match.params.id) {
-            window.location.href = '/product/' + this.props.match.params.id;
+            window.location.href = '/suculent/' + this.props.match.params.id;
         } else {
-            this.getProducts();
+            this.getSuculents();
             window.location.href = '/';
             
         }
@@ -85,14 +82,14 @@ export default class RegisterProduct extends Component {
         return (
             <div className="col-md-6 offset-md-3">
                 <div className="card card-body">
-                    <h4>Registrar Producto</h4>
+                    <h4>Registrar Suculenta</h4>
 
 
-                    {/*SET producto */}
+                    {/*SET Suculent */}
                     <div className="form-group">
                         <input type="text"
                             className="form-control"
-                            placeholder="Nombre del Producto"
+                            placeholder="Nombre de la Suculenta"
                             name="title"
                             onChange={this.onInputChange}
                             value={this.state.title}
@@ -119,10 +116,10 @@ export default class RegisterProduct extends Component {
                     <div className="form-group">
                         <input type="text"
                             className="form-control"
-                            placeholder="cantidad"
-                            name="cantidad"
+                            placeholder="Enfermedad"
+                            name="enfermedad"
                             onChange={this.onInputChange}
-                            value={this.state.cantidad}
+                            value={this.state.enfermedad}
                             required
                         />
                     </div>
@@ -134,10 +131,21 @@ export default class RegisterProduct extends Component {
                     <div className="form-group">
                         <input type="text"
                             className="form-control"
-                            placeholder="precio"
-                            name="precio"
+                            placeholder="Reproduction"
+                            name="reproduction"
                             onChange={this.onInputChange}
-                            value={this.state.precio}
+                            value={this.state.reproduction}
+                            required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <input type="text"
+                            className="form-control"
+                            placeholder="Cuidados"
+                            name="cuidado"
+                            onChange={this.onInputChange}
+                            value={this.state.cuidado}
                             required
                         />
                     </div>

@@ -42,7 +42,7 @@ export default class Admin extends Component {
         return (
             <div className="col-md-6 offset-md-3">
                 <div className="card card-body">
-                    <h4>Herramientas de Admin</h4>
+                    <h4>Herramientas de Publicación</h4>
 
 
 
@@ -52,27 +52,25 @@ export default class Admin extends Component {
                         <form onSubmit={this.onSubmitProduct}>
                             
                             <button type='submit' className="btn btn-warning">
-                                Registro de Producto
+                                Registrar una suculenta personal
                             </button>
 
                         </form>
-                        
-                        
-                    </div>
 
-                    <div className="form-group">
+                        <div className="form-group">
+                        
+                        </div>
 
-                        <form onSubmit={this.onSubmitAdmin}>
+                        <form onSubmit={this.onSubmitProduct}>
                             
                             <button type='submit' className="btn btn-warning">
-                                Registrar Nuevo Administrador
-                            </button>
+                                Registrar un post en el foro    
+                                </button>
 
                         </form>
                         
                         
                     </div>
-
 
                     <div className="form-group">
                         
