@@ -5,12 +5,8 @@ const  cors = require('cors');
 const app = express(); //devuelve el servidor
 const multer = require('multer');
 const path = require('path');
-const neo4j = require("neo4j-driver");
-const neo4 = require("./databases/neo4j")
-const redisConect = require("./databases/redis")
-const redis = require("redis")
+
 const bodyParser = require('body-parser')
-const jsonParser = bodyParser.json()
 
 
 
@@ -62,18 +58,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-//redis
-
-/*
-console.log("aqui empieza")
-var client = redis.createClient();
-client.hset('carritoprueba:1451', 'javascript', 'AngularJS');
-const car=client.hgetall('carritoprueba:1451', function(err, object) {
-    console.log(object);
-    return object;
-});
-console.log(car)
-console.log("aqui termina")*/
 
 
 // routes
@@ -81,8 +65,6 @@ app.use('/api/users', require ('./routes/users') )
 app.use('/api/products', require ('./routes/products') )
 
 
-//app.use('/api/shoppingCars', require ('./routes/shoppingCars') )
-//app.use('/api/histories', require ('./routes/histories') )
 
 app.use('/api/comment', require ('./routes/comments'))
 app.use('/api/images', require ('./routes/images') )

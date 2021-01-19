@@ -18,9 +18,7 @@ export default class Navigation extends Component {
             password: '',
             title: '',
             auth: false,
-            categories: [],
-            deliveries: [],
-            dropdown: "none"
+            
         }
     }
 
@@ -34,17 +32,7 @@ export default class Navigation extends Component {
     }
 
     async componentDidMount() {
-        const res = await axios.get("http://localhost:5000/api/category");
-        this.setState({
-            categories: res.data
-        })
-        const res2 = await axios.get("http://localhost:5000/api/deliveryType");
-        this.setState({
-            deliveries: res2.data
-        })
-        //const res = await  axios.get("http://localhost:5000/api/userinfo")
-        console.log(this.state.auth)
-
+        
     }
 
     async logOut() {
