@@ -59,9 +59,9 @@ export default class Navigation extends Component {
     }
 
     clickChange() {
-        if(this.state.dropdown === "none") {
+        if (this.state.dropdown === "none") {
             this.setState({ dropdown: "block" });
-        } else if(this.state.dropdown === "block") {
+        } else if (this.state.dropdown === "block") {
             this.setState({ dropdown: "none" });
         }
     }
@@ -77,8 +77,8 @@ export default class Navigation extends Component {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container">
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-                                {/*categorias*/}
-                            <ul id = "titulo"
+                            {/*categorias*/}
+                            <ul id="titulo"
                                 className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
                                     FRACTAL
@@ -88,7 +88,7 @@ export default class Navigation extends Component {
                                 </button>
 
                             </ul>
-                                {/*buscador*/}
+                            {/*buscador*/}
                             <form className="form-inline my-2 my-lg-0">
                                 <input className="form-control mr-sm-2"
                                     type="search"
@@ -107,8 +107,30 @@ export default class Navigation extends Component {
 
 
                                 <li className="nav-item active">
+                                    <Link className="nav-link" to="/foro">
+                                        Foro
+                                </Link>
+                                </li>
+
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/catalog">
+                                        Mi Catálogo
+                                </Link>
+                                </li>
+
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/yards">
+                                        Jardines
+                                </Link>
+                                </li>
+
+
+                                
+
+
+                                <li className="nav-item active">
                                     <Link className="nav-link" to="/profile">
-                                        {user.nombre}
+                                        Mi Perfil
                                     </Link>
                                 </li>
                                 <li className="nav-item active">
@@ -116,15 +138,17 @@ export default class Navigation extends Component {
                                         <span onClick={this.logOut}>LogOut</span>
                                     </Link>
                                 </li>
+                                {/*
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/shoppingCar">
                                         <FaShoppingCart color='white' size='1.5rem' />
                                     </Link>
                                 </li>
+                                */}
                             </ul>
-                            </div>
-
                         </div>
+
+                    </div>
 
                 </nav>
             )
@@ -134,9 +158,9 @@ export default class Navigation extends Component {
             return (
                 <nav className="navbar navbar-expand-lg navbar-dark bg-success">
                     <div className="container">
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-                                {/*categorias*/}
-                            <ul id = "titulo"
+                        <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            {/*categorias*/}
+                            <ul id="titulo"
                                 className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
                                     FRACTAL
@@ -179,22 +203,25 @@ export default class Navigation extends Component {
 
 
                                 <li className="nav-item active">
+                                    <Link className="nav-link" to="/catalog">
+                                        Mi Catálogo
+                                </Link>
+                                </li>
+
+
+                                <li className="nav-item active">
                                     <Link className="nav-link" to="/yards">
                                         Jardines
                                 </Link>
                                 </li>
 
 
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to="/catalog">
-                                        Catálogo
-                                </Link>
-                                </li>
+                                
 
 
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/profile">
-                                        {user.nombre}
+                                        Mi Perfil
                                     </Link>
                                 </li>
                                 <li className="nav-item active">
@@ -203,7 +230,7 @@ export default class Navigation extends Component {
                                     </Link>
                                 </li>
                             </ul>
-                            </div>
+                        </div>
                     </div>
                 </nav>
             )
@@ -214,9 +241,9 @@ export default class Navigation extends Component {
             return (
                 <nav className="navbar navbar-expand-lg navbar-dark bg-success">
                     <div className="container">
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-                                {/*categorias*/}
-                            <ul id = "titulo"
+                        <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            {/*categorias*/}
+                            <ul id="titulo"
                                 className="navbar-nav mr-auto">
                                 <Link className="navbar-brand" to="/">
                                     FRACTAL
@@ -255,7 +282,7 @@ export default class Navigation extends Component {
                                 </li>
                             </ul>
                         </div>
-                        </div>
+                    </div>
                 </nav>
             )
         }
