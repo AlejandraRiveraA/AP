@@ -173,7 +173,7 @@ export default class Navigation extends Component {
 
 
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="/foro">
+                                    <Link className="nav-link" to="/PostList">
                                         Foro
                                 </Link>
                                 </li>

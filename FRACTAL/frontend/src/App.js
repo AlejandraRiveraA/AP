@@ -8,15 +8,18 @@ import SuculentList from './components/SuculentList'
 import Login from './components/Login'
 import Register from './components/Register'
 import Imagen from './components/Imagen'
-import ProductSite from './components/SuculentSite'
-import registroProducto from './components/registroSuculenta'
+import SuculentSite from './components/SuculentSite'
+import registroSuculenta from './components/registroSuculenta'
 import Catalog from './components/catalog'
+import registroPost from './components/registroPost'
 
 
 import admin from "./components/admin"
 import profile from "./components/userProfile"
 
 import { UserProvider } from './UserContext';
+import PostsList from './components/PostList';
+import Foro from './components/Foro';
 
 
 function App() {
@@ -36,12 +39,16 @@ function App() {
             <Route path="/search/:title" exact component={SuculentList} />
             
             
-            <Route path="/precios/:pr" exact component={SuculentList} />
+            
             <Route path="/uploadImage/:id" exact component={Imagen} />
-            <Route path="/suculent/:id" exact component={ProductSite} />
-            <Route path="/addProduct" exact component={registroProducto} />
+            <Route path="/suculent/:id" exact component={SuculentSite} />
+            <Route path="/addSuculent" exact component={registroSuculenta} />
+            <Route path="/addPost" exact component={registroPost} />
             <Route path="/catalog" exact component={Catalog} />
-            <Route path="/edit/:id" component={registroProducto} />
+            <Route path="/PostList" exact component={PostsList} />
+            <Route path="/post/:id" exact component={Foro} />
+
+            
             
             
             <Route path="/admin" exact component={admin} />

@@ -22,11 +22,20 @@ export default class Admin extends Component {
 
     
 
-    onSubmitProduct  = async(e) => {
+    onSubmitSuculent  = async(e) => {
         e.preventDefault();
 
          
-        window.location.href = '/addProduct'; //al ejecutar este evento y subir la info nos devuelve a la pagina principal 
+        window.location.href = '/addSuculent'; //al ejecutar este evento y subir la info nos devuelve a la pagina principal 
+    }
+
+
+    
+    onSubmitPost  = async(e) => {
+        e.preventDefault();
+
+         
+        window.location.href = '/addPost'; //al ejecutar este evento y subir la info nos devuelve a la pagina principal 
     }
 
     onSubmitAdmin  = async(e) => {
@@ -49,7 +58,7 @@ export default class Admin extends Component {
 
                     <div className="form-group">
 
-                        <form onSubmit={this.onSubmitProduct}>
+                        <form onSubmit={this.onSubmitSuculent}>
                             
                             <button type='submit' className="btn btn-warning">
                                 Registrar una suculenta personal
@@ -61,7 +70,7 @@ export default class Admin extends Component {
                         
                         </div>
 
-                        <form onSubmit={this.onSubmitProduct}>
+                        <form onSubmit={this.onSubmitPost}>
                             
                             <button type='submit' className="btn btn-warning">
                                 Registrar un post en el foro    

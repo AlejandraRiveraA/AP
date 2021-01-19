@@ -2,18 +2,7 @@ import React, { Component } from 'react'
 
 
 export default class Imagen extends Component {
-/*
-    state = {
-        images: [],
-        _idObject: ""
-    }
 
-    async componentDidMount() {
-        const res = await axios.get('http://localhost:5000/api/images');
-        this.setState({
-            images: res.data.filter(image => image.id_object === this.props.match.params.id)
-        })
-    }*/
 
     render() {
         return (
