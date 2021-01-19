@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Slide } from 'react-slideshow-image'
-import { FaDollarSign } from 'react-icons/fa';
-import { Link } from 'react-router-dom'
-import ReactStars from "react-rating-stars-component";
 
 const properties = {
     indicators: true,
@@ -47,6 +44,8 @@ export default class SuculentSite extends Component {
             cuidado: res.data.cuidado,
             _id: this.props.match.params.id,
         })
+        console.log(this.state.title)
+        console.log('sí entra acá')
 
         const res2 = await axios.get('http://localhost:5000/api/images');
         this.setState({
@@ -90,16 +89,6 @@ export default class SuculentSite extends Component {
 
 
 
-    ratingChanged = async (newRating) => {
-        await axios.put('http://localhost:5000/api/estrellas/star:' + this.state._id, {
-            usuario: this.state.idUser,
-            estrellas: newRating
-        })
-        console.log(newRating);
-        window.location.reload(false);
-    };
-
-
 
     render() {
 
@@ -120,7 +109,7 @@ export default class SuculentSite extends Component {
                         <p className="card-text">Descripción: {this.state.description}</p>
                         <p className="card-text">Enfermedades: {this.state.enfermedad}</p>
                         <p className="card-text">Cuidados: {this.state.cuidado}</p>
-                        <p className="card-text">{'Reproducción: ' + this.state.reproduction}</p>
+                        <p className="card-text">Reproducción: {this.state.reproduction}</p>
                         <br></br>
                         <br></br>
                         <br></br>

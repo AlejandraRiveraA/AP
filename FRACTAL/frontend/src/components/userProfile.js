@@ -6,8 +6,8 @@ import axios from 'axios'
 const properties = {
     indicators: true,
     speed: 1,
-    infinite: true,
-    arrows: true,
+    infinite: false,
+    arrows: false,
     className: 'slides'
 }
 

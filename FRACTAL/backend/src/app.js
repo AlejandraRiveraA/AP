@@ -16,7 +16,7 @@ const session = require ('express-session');
 const passport = require('passport');   
 const ctrUser = require('./controllers/users.controller');
 const MongoStore = require('connect-mongo')(session);
-const MONGO_URL = 'mongodb://localhost/mongoelmercadito';
+const MONGO_URL = 'mongodb://localhost/Fractal';
 
 
 
