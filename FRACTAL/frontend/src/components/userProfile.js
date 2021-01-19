@@ -18,6 +18,7 @@ export default class profile extends Component {
   
         images: [],
         username:'',
+        password:'',
         nombre:'',
         apellido1:'',
         apellido2:''
@@ -31,6 +32,7 @@ export default class profile extends Component {
 
         this.setState({
             username: res.data.username,
+            password: res.data.password,
             nombre: res.data.nombre,
             apellido1: res.data.apellido1,
             apellido2: res.data.apellido2
@@ -69,11 +71,16 @@ export default class profile extends Component {
 
         const resSession = await axios.get('http://localhost:5000/api/sessionState/')
         await axios.put("http://localhost:5000/api/users/"+ resSession.data[0].id, {
+            username:this.state.username,
+            password:this.state.password,
             nombre: this.state.nombre,
             apellido1: this.state.apellido1,
             apellido2: this.state.apellido2,
 
         });
+
+        window.location.href = 'http://localhost:3000/profile';
+
     }
 
     render() {

@@ -12,7 +12,7 @@ export default class SuculentList extends Component {
     }
 
     async componentDidMount() {
-        const res = await axios.get('http://localhost:5000/api/suculents')
+        const res = await axios.get('http://localhost:5000/api/suculents/5f08ddfca48a74083836ce7a')
         this.setState({ suculents: res.data })
         const res2 = await axios.get('http://localhost:5000/api/images')
         this.setState({ images: res2.data })

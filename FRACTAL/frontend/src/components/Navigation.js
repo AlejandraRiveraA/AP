@@ -167,7 +167,7 @@ export default class Navigation extends Component {
 
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/admin">
-                                        Admin
+                                        Publicaciones
                                 </Link>
                                 </li>
 
