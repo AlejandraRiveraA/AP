@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import UserContext from '../UserContext'
 
-export default class RegisterSuculent extends Component {
-
+    export default class RegisterSuculent extends Component {
+        static contextType = UserContext
 
     state = {
         suculents: [],
@@ -12,12 +13,14 @@ export default class RegisterSuculent extends Component {
         reproduction: '',
         cuidado: '',
         editando: false,
-        _id: ''
+        _id: '',
+        id:''
     }
 
     async componentDidMount() {
         this.getSuculents();
-
+        const resSession = await axios.get('http://localhost:5000/api/sessionState/')
+        this.setState({id: resSession.data[0].id})
 
         if (this.props.match.params.id) {
             const resE = await axios.get('http://localhost:5000/api/suculents/' + this.props.match.params.id);
@@ -37,12 +40,16 @@ export default class RegisterSuculent extends Component {
     }
 
     async registrar() {
+
+       // const resSession = await axios.get('http://localhost:5000/api/sessionState/')
+
         const newSuculent = {
             title: this.state.title,
             description: this.state.description,
             enfermedad: this.state.enfermedad,
             reproduction: this.state.reproduction,
-            cuidado: this.state.cuidado
+            cuidado: this.state.cuidado,
+            id: this.state.id
         }
         if (this.state.editando) {
             await axios.put('http://localhost:5000/api/suculents/' + this.state._id, newSuculent);

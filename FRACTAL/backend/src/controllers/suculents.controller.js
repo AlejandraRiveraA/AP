@@ -15,14 +15,16 @@ suculentsCtrl.createSuculent = async (req, res) => {
         description,
         enfermedad,
         reproduction,
-        cuidado } = req.body;
+        cuidado,
+        id } = req.body;
     const newSuculent = new Suculent({
 
             title,
             description,
             enfermedad,
             reproduction,
-            cuidado
+            cuidado,
+            id
 
 
     });
@@ -65,5 +67,15 @@ suculentsCtrl.deleteSuculent = async (req, res) => {
         res.json({message : "Suculenta Eliminada"});
 
 };
+
+suculentsCtrl.suculentasUsuarios = async (req, res) => {
+    
+    const suculents = await Suculent.find({id: { $regex : req.params.id }});
+    
+    console.log({message :'GET Empleado por Nombre: ' + req.params.id});
+    res.json(suculents);
+
+};
+
 
 module.exports = suculentsCtrl;

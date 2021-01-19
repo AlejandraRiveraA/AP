@@ -18,7 +18,9 @@ const suculentSchema = new Schema(
         
         reproduction: String,
 
-        cuidado: String
+        cuidado: String,
+
+        id: String
 
     }, {
 

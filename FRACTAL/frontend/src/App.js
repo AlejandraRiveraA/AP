@@ -10,6 +10,7 @@ import Register from './components/Register'
 import Imagen from './components/Imagen'
 import ProductSite from './components/SuculentSite'
 import registroProducto from './components/registroSuculenta'
+import Catalog from './components/catalog'
 
 
 import admin from "./components/admin"
@@ -39,6 +40,7 @@ function App() {
             <Route path="/uploadImage/:id" exact component={Imagen} />
             <Route path="/suculent/:id" exact component={ProductSite} />
             <Route path="/addProduct" exact component={registroProducto} />
+            <Route path="/catalog" exact component={Catalog} />
             <Route path="/edit/:id" component={registroProducto} />
             
             
