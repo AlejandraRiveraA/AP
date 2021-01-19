@@ -156,7 +156,7 @@ export default class profile extends Component {
                 </div>
 
                 <div className="col-6">
-                    <div className="col-md-6 offset-md-3">
+                    <div className="col-md-12 offset-md-3">
 
                         <div className="card card-body">
                             <h4>Foto de Perfil</h4>

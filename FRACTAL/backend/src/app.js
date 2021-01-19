@@ -79,16 +79,16 @@ console.log("aqui termina")*/
 // routes
 app.use('/api/users', require ('./routes/users') )
 app.use('/api/products', require ('./routes/products') )
-app.use('/api/purchases', require('./routes/purchase'))
-app.use('/api/deliveryType', require ('./routes/deliveryType'))
+
+
 //app.use('/api/shoppingCars', require ('./routes/shoppingCars') )
 //app.use('/api/histories', require ('./routes/histories') )
-app.use('/api/category', require ('./routes/category'))
+
 app.use('/api/comment', require ('./routes/comments'))
 app.use('/api/images', require ('./routes/images') )
 app.use('/api/sessionState', require ('./routes/sessions'))
-app.use('/api/carrito', require ('./routes/carrito'))
-app.use('/api/estrellas', require ('./routes/estrellas'))
+
+
 
 app.post('/api/singup', ctrUser.postSignUp);
 app.post('/api/login', ctrUser.postLogIn);
