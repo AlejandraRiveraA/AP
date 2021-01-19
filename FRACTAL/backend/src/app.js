@@ -10,14 +10,6 @@ const bodyParser = require('body-parser')
 
 
 
-/*
-app.use(neo4);
-app.get("/", function(req,res) {
-    neo4.createUser("Trapito")
-    res.send("FUNKA")
-})*/
-
-
 //---
 const passportConf = require('./config/passport');
 const session = require ('express-session');
@@ -62,7 +54,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // routes
 app.use('/api/users', require ('./routes/users') )
-app.use('/api/products', require ('./routes/products') )
+app.use('/api/suculents', require ('./routes/suculents') )
 
 
 
