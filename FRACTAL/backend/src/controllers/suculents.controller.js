@@ -47,7 +47,7 @@ suculentsCtrl.updateSuculent = async (req, res) => {
         description,
         enfermedad,
         reproduction,
-        cuidado, id } = req.body;
+        cuidado} = req.body;
 
     await Suculent.findOneAndUpdate({_id: req.params.id}, {
         

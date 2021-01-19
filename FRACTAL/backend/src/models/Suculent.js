@@ -20,7 +20,7 @@ const suculentSchema = new Schema(
 
         cuidado: String,
 
-        idUS: String
+        id: String
 
     }, {
 
